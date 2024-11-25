@@ -98,18 +98,20 @@ h6 {
 }
 
 /* --------GENERAL STYLES---------- */
+
 .main-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 100vw;
+	justify-content: center;
 	background-color: var(--grayish-cyan-200);
 	font-family: var(--ff-regular);
+	min-height: 64rem;
 }
 
 .logo {
 	max-width: 5.438rem;
-	margin: 4rem;
+	margin: 5rem;
 }
 
 .btn {
@@ -126,9 +128,15 @@ h6 {
 	gap: 2rem;
 	background-color: var(--white);
 	width: 100%;
-	border-top-left-radius: 2rem;
-	border-top-right-radius: 2rem;
+	border-radius: 2rem;
 	padding: 3rem;
+	max-width: 58rem;
+}
+
+.calculator__main {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 }
 
 /* --------INPUT BILL STYLES---------- */
@@ -179,16 +187,19 @@ h6 {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1.25rem;
+	justify-content: center;
+	align-items: center;
 }
 
 .calculator__tip-btn {
-	width: 10rem;
+	width: 8rem;
 
 	font-weight: var(--fw-bold);
 	font-size: var(--fs-input);
 	line-height: 1;
 	background-color: var(--cyan);
 	color: var(--grayish-cyan-0);
+	max-width: 7.5rem;
 }
 
 .btn-custom {
@@ -202,6 +213,11 @@ h6 {
 	padding: 2rem 1.5rem;
 	display: grid;
 	gap: 2rem;
+}
+
+.perperson__content {
+	display: grid;
+	gap: 1rem;
 }
 
 .perperson__bill-line {
@@ -235,4 +251,20 @@ h6 {
 	color: var(--cyan);
 	font-size: 1.2rem;
 	line-height: 1;
+	max-height: 4rem;
+	align-self: end;
+}
+
+@media (min-width: 58rem) {
+	.calculator {
+		flex-direction: row;
+		padding: 2rem;
+	}
+
+	.calculator__main {
+		width: 50%;
+	}
+	.calculator__perperson {
+		width: 50%;
+	}
 }
