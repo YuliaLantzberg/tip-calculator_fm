@@ -1,0 +1,98 @@
+/* --------CSS VARIABLES---------- */
+:root {
+	/* ## Colors */
+
+	/* ### Primary */
+
+	--strong-cyan-500: hsl(172, 67%, 45%);
+
+	/* ### Neutral */
+
+	--cyan: hsl(183, 100%, 15%);
+	--grayish-cyan-600: hsl(186, 14%, 43%);
+	--grayish-cyan-400: hsl(184, 14%, 56%);
+	--grayish-cyan-200: hsl(185, 41%, 84%);
+	--grayish-cyan-0: hsl(189, 41%, 97%);
+	--white: hsl(0, 0%, 100%);
+
+	/* ## Typography */
+
+	/* ### Body Copy */
+
+	--fs-input: 1.5rem;
+
+	/* ### Font */
+
+	--ff-regular: "Space Mono", sans-serif;
+	--fw-bold: 700;
+}
+
+/* --------CSS RESET-------------- */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+	margin: 0;
+}
+
+body {
+	/* 3. Add accessible line-height */
+	line-height: 1.5;
+	/* 4. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+	isolation: isolate;
+}
