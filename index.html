@@ -23,17 +23,16 @@
 		<title>Frontend Mentor | Tip calculator app</title>
 	</head>
 	<body>
-		<main class="main-container">
+		<main class="main-container flex-column">
 			<img src="images/logo.svg" class="logo" alt="" />
-			<article class="calculator">
-				<div class="calculator__main">
-					<section class="calculator__total-bill">
+			<article class="calculator flex-column">
+				<div class="calculator__main flex-column">
+					<section class="calculator__total-bill flex-column">
 						<h2 class="calculator__section-title">Bill</h2>
 						<input
 							type="number"
 							class="calculator__input"
 							placeholder="0"
-							value="0"
 							min="0"
 							id="input-bill"
 						/>
@@ -46,15 +45,17 @@
 							<button class="calculator__tip-btn btn">15%</button>
 							<button class="calculator__tip-btn btn">25%</button>
 							<button class="calculator__tip-btn btn">50%</button>
-							<button class="calculator__tip-btn btn-custom btn">Custom</button>
+							<input
+								class="calculator__tip-btn btn-custom btn"
+								placeholder="Custom"
+							/>
 						</div>
 					</section>
-					<section class="calculator__num-ppl">
+					<section class="calculator__num-ppl flex-column">
 						<h2 class="calculator__section-title">Number of People</h2>
 						<input
 							type="number"
 							class="calculator__input"
-							value="0"
 							placeholder="0"
 							min="1"
 							id="input-ppl"

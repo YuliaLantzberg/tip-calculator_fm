@@ -100,10 +100,6 @@ h6 {
 /* --------GENERAL STYLES---------- */
 
 .main-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	background-color: var(--grayish-cyan-200);
 	font-family: var(--ff-regular);
 	min-height: 64rem;
@@ -118,13 +114,28 @@ h6 {
 	border: none;
 	border-radius: 0.5rem;
 	padding: 1rem;
+	cursor: pointer;
+}
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.calculator__input,
+.calculator__tip-btn {
+	font-weight: var(--fw-bold);
+	font-size: var(--fs-input);
+}
+
+.calculator__tip-buttons,
+.main-container {
+	justify-content: center;
+	align-items: center;
 }
 
 /* --------CALCULATOR STYLES---------- */
 
 .calculator {
-	display: flex;
-	flex-direction: column;
 	gap: 2rem;
 	background-color: var(--white);
 	width: 100%;
@@ -134,8 +145,6 @@ h6 {
 }
 
 .calculator__main {
-	display: flex;
-	flex-direction: column;
 	gap: 2rem;
 }
 
@@ -143,8 +152,6 @@ h6 {
 
 .calculator__total-bill,
 .calculator__num-ppl {
-	display: flex;
-	flex-direction: column;
 	gap: 0.5rem;
 }
 
@@ -155,8 +162,6 @@ h6 {
 
 .calculator__input {
 	width: 100%;
-	appearance: textfield;
-	-moz-appearance: textfield;
 	padding: 0.25rem 1rem;
 	border: none;
 	background-color: var(--grayish-cyan-0);
@@ -165,9 +170,23 @@ h6 {
 	background-repeat: no-repeat;
 	color: var(--cyan);
 	text-align: right;
-	font-weight: var(--fw-bold);
-	font-size: var(--fs-input);
-	line-height: 1;
+	cursor: pointer;
+}
+
+.calculator__input,
+.calculator__input:hover,
+.calculator__input:focus {
+	appearance: textfield;
+	-moz-appearance: textfield;
+}
+
+.calculator__input:hover,
+.calculator__input:focus {
+	outline-color: var(--strong-cyan-500);
+}
+
+.calculator__input::placeholder {
+	color: var(--grayish-cyan-400);
 }
 
 .calculator__input#input-bill {
@@ -187,15 +206,10 @@ h6 {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1.25rem;
-	justify-content: center;
-	align-items: center;
 }
 
 .calculator__tip-btn {
 	width: 8rem;
-
-	font-weight: var(--fw-bold);
-	font-size: var(--fs-input);
 	line-height: 1;
 	background-color: var(--cyan);
 	color: var(--grayish-cyan-0);
@@ -205,6 +219,14 @@ h6 {
 .btn-custom {
 	background-color: var(--grayish-cyan-0);
 	color: var(--cyan);
+	padding: 0.75rem;
+}
+
+.btn-custom:hover,
+.btn-custom:focus {
+	border: solid 2px var(--strong-cyan-500);
+	outline-color: var(--strong-cyan-500);
+	background-color: var(--grayish-cyan-200);
 }
 
 .calculator__perperson {
@@ -238,10 +260,10 @@ h6 {
 }
 
 .perperson__amount {
-	font-size: var(--fs-input);
-	font-weight: var(--fw-bold);
 	color: var(--strong-cyan-500);
 	display: inline-block;
+	font-weight: var(--fw-bold);
+	font-size: 2rem;
 }
 
 .btn--reset {
@@ -253,6 +275,12 @@ h6 {
 	line-height: 1;
 	max-height: 4rem;
 	align-self: end;
+	transition: background-color 0.5s;
+}
+
+.btn--reset:hover,
+.btn--reset:active {
+	background-color: var(--grayish-cyan-200);
 }
 
 @media (min-width: 58rem) {
