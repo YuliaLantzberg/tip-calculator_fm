@@ -96,3 +96,143 @@ h6 {
 #__next {
 	isolation: isolate;
 }
+
+/* --------GENERAL STYLES---------- */
+.main-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100vw;
+	background-color: var(--grayish-cyan-200);
+	font-family: var(--ff-regular);
+}
+
+.logo {
+	max-width: 5.438rem;
+	margin: 4rem;
+}
+
+.btn {
+	border: none;
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+
+/* --------CALCULATOR STYLES---------- */
+
+.calculator {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	background-color: var(--white);
+	width: 100%;
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+	padding: 3rem;
+}
+
+/* --------INPUT BILL STYLES---------- */
+
+.calculator__total-bill,
+.calculator__num-ppl {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.calculator__section-title {
+	font-size: 1rem;
+	color: var(--grayish-cyan-600);
+}
+
+.calculator__input {
+	width: 100%;
+	appearance: textfield;
+	-moz-appearance: textfield;
+	padding: 0.25rem 1rem;
+	border: none;
+	background-color: var(--grayish-cyan-0);
+	border-radius: 0.25rem;
+	background-position: 1.5rem center;
+	background-repeat: no-repeat;
+	color: var(--cyan);
+	text-align: right;
+	font-weight: var(--fw-bold);
+	font-size: var(--fs-input);
+	line-height: 1;
+}
+
+.calculator__input#input-bill {
+	background-image: url("images/icon-dollar.svg");
+}
+
+.calculator__input#input-ppl {
+	background-image: url("images/icon-person.svg");
+}
+
+.calculator__select-tip {
+	display: grid;
+	gap: 1rem;
+}
+
+.calculator__tip-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+}
+
+.calculator__tip-btn {
+	width: 10rem;
+
+	font-weight: var(--fw-bold);
+	font-size: var(--fs-input);
+	line-height: 1;
+	background-color: var(--cyan);
+	color: var(--grayish-cyan-0);
+}
+
+.btn-custom {
+	background-color: var(--grayish-cyan-0);
+	color: var(--cyan);
+}
+
+.calculator__perperson {
+	background-color: var(--cyan);
+	border-radius: 1rem;
+	padding: 2rem 1.5rem;
+	display: grid;
+	gap: 2rem;
+}
+
+.perperson__bill-line {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.perperson__title {
+	font-size: 1rem;
+	color: var(--grayish-cyan-0);
+}
+
+.perperson__note {
+	font-weight: var(--fw-bold);
+	color: var(--grayish-cyan-400);
+	font-size: 0.85rem;
+}
+
+.perperson__amount {
+	font-size: var(--fs-input);
+	font-weight: var(--fw-bold);
+	color: var(--strong-cyan-500);
+	display: inline-block;
+}
+
+.btn--reset {
+	text-transform: uppercase;
+	font-weight: var(--fw-bold);
+	background-color: var(--strong-cyan-500);
+	color: var(--cyan);
+	font-size: 1.2rem;
+	line-height: 1;
+}

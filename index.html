@@ -23,25 +23,41 @@
 		<title>Frontend Mentor | Tip calculator app</title>
 	</head>
 	<body>
-		<main>
+		<main class="main-container">
 			<img src="images/logo.svg" class="logo" alt="" />
 			<article class="calculator">
 				<section class="calculator__total-bill">
 					<h2 class="calculator__section-title">Bill</h2>
-					<input type="number" class="calculator__input-bill" />
+					<input
+						type="number"
+						class="calculator__input"
+						placeholder="0"
+						value="0"
+						min="0"
+						id="input-bill"
+					/>
 				</section>
 				<section class="calculator__select-tip">
 					<h2 class="calculator__section-title">Select Tip %</h2>
-					<button class="calculator__tip-btn btn">5%</button>
-					<button class="calculator__tip-btn btn">10%</button>
-					<button class="calculator__tip-btn btn">15%</button>
-					<button class="calculator__tip-btn btn">25%</button>
-					<button class="calculator__tip-btn btn">50%</button>
-					<button class="calculator__tip-btn btn-custom btn">Custom</button>
+					<div class="calculator__tip-buttons">
+						<button class="calculator__tip-btn btn">5%</button>
+						<button class="calculator__tip-btn btn">10%</button>
+						<button class="calculator__tip-btn btn">15%</button>
+						<button class="calculator__tip-btn btn">25%</button>
+						<button class="calculator__tip-btn btn">50%</button>
+						<button class="calculator__tip-btn btn-custom btn">Custom</button>
+					</div>
 				</section>
 				<section class="calculator__num-ppl">
 					<h2 class="calculator__section-title">Number of People</h2>
-					<input type="number" class="calculator__input-ppl" />
+					<input
+						type="number"
+						class="calculator__input"
+						value="1"
+						placeholder="1"
+						min="1"
+						id="input-ppl"
+					/>
 				</section>
 				<section class="calculator__perperson">
 					<div class="perperson__bill-line" id="perperson__tip">
@@ -49,14 +65,14 @@
 							<h2 class="perperson__title">Tip Amount</h2>
 							<p class="perperson__note">/ person</p>
 						</div>
-						<p class="perperson__amount">0</p>
+						<p class="perperson__amount">$0</p>
 					</div>
 					<div class="perperson__bill-line" id="perperson__total">
 						<div class="perperson__title-block">
 							<h2 class="perperson__title">Total</h2>
 							<p class="perperson__note">/ person</p>
 						</div>
-						<p class="perperson__amount">0</p>
+						<p class="perperson__amount">$0</p>
 					</div>
 					<button class="btn--reset btn">Reset</button>
 				</section>
