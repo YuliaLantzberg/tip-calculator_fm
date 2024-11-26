@@ -133,6 +133,10 @@ h6 {
 	align-items: center;
 }
 
+.error {
+	color: tomato;
+}
+
 /* --------CALCULATOR STYLES---------- */
 
 .calculator {
@@ -158,6 +162,8 @@ h6 {
 .calculator__section-title {
 	font-size: 1rem;
 	color: var(--grayish-cyan-600);
+	display: flex;
+	justify-content: space-between;
 }
 
 .calculator__input {
@@ -175,14 +181,30 @@ h6 {
 
 .calculator__input,
 .calculator__input:hover,
-.calculator__input:focus {
+.calculator__input:focus,
+.btn-custom,
+.btn-custom:hover,
+.btn-custom:focus {
 	appearance: textfield;
 	-moz-appearance: textfield;
 }
 
 .calculator__input:hover,
-.calculator__input:focus {
+.calculator__input:focus,
+.btn-custom {
 	outline-color: var(--strong-cyan-500);
+}
+
+.error.calculator__input,
+.error.btn-custom,
+#error_bill,
+#error_ppl {
+	color: tomato;
+}
+
+.error.calculator__input:focus,
+.error.btn-custom:focus {
+	outline-color: tomato;
 }
 
 .calculator__input::placeholder {
@@ -196,6 +218,8 @@ h6 {
 .calculator__input#input-ppl {
 	background-image: url("images/icon-person.svg");
 }
+
+/* TIPS BUTTONS STYLES */
 
 .calculator__select-tip {
 	display: grid;
@@ -216,6 +240,11 @@ h6 {
 	max-width: 7.5rem;
 }
 
+.calculator__tip-btn:hover,
+.calculator__tip-btn:focus {
+	background-color: var(--strong-cyan-500);
+}
+
 .btn-custom {
 	background-color: var(--grayish-cyan-0);
 	color: var(--cyan);
@@ -228,6 +257,8 @@ h6 {
 	outline-color: var(--strong-cyan-500);
 	background-color: var(--grayish-cyan-200);
 }
+
+/* PER PERSON SECTION STYLES */
 
 .calculator__perperson {
 	background-color: var(--cyan);
@@ -294,5 +325,11 @@ h6 {
 	}
 	.calculator__perperson {
 		width: 50%;
+	}
+	.calculator__input,
+	.calculator__input:hover,
+	.calculator__input:focus {
+		appearance: textfield;
+		-moz-appearance: textfield;
 	}
 }

@@ -18,9 +18,9 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="styles.css" />
-		<script src="script.js" defer></script>
 
 		<title>Frontend Mentor | Tip calculator app</title>
+		<script defer src="script.js"></script>
 	</head>
 	<body>
 		<main class="main-container flex-column">
@@ -28,12 +28,15 @@
 			<article class="calculator flex-column">
 				<div class="calculator__main flex-column">
 					<section class="calculator__total-bill flex-column">
-						<h2 class="calculator__section-title">Bill</h2>
+						<h2 class="calculator__section-title">
+							Bill<span id="error_bill"></span>
+						</h2>
 						<input
 							type="number"
 							class="calculator__input"
 							placeholder="0"
 							min="0"
+							step="0.01"
 							id="input-bill"
 						/>
 					</section>
@@ -48,11 +51,16 @@
 							<input
 								class="calculator__tip-btn btn-custom btn"
 								placeholder="Custom"
+								type="number"
+								min="0"
+								max="100"
 							/>
 						</div>
 					</section>
 					<section class="calculator__num-ppl flex-column">
-						<h2 class="calculator__section-title">Number of People</h2>
+						<h2 class="calculator__section-title">
+							Number of People <span id="error_ppl"></span>
+						</h2>
 						<input
 							type="number"
 							class="calculator__input"
@@ -65,19 +73,19 @@
 
 				<section class="calculator__perperson">
 					<div class="perperson__content">
-						<div class="perperson__bill-line" id="perperson__tip">
+						<div class="perperson__bill-line">
 							<div class="perperson__title-block">
 								<h2 class="perperson__title">Tip Amount</h2>
 								<p class="perperson__note">/ person</p>
 							</div>
-							<p class="perperson__amount">$0.00</p>
+							<p class="perperson__amount" id="perperson__tip">$0.00</p>
 						</div>
-						<div class="perperson__bill-line" id="perperson__total">
+						<div class="perperson__bill-line">
 							<div class="perperson__title-block">
 								<h2 class="perperson__title">Total</h2>
 								<p class="perperson__note">/ person</p>
 							</div>
-							<p class="perperson__amount">$0.00</p>
+							<p class="perperson__amount" id="perperson__total">$0.00</p>
 						</div>
 					</div>
 
