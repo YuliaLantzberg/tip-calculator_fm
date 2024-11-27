@@ -99,6 +99,12 @@ h6 {
 
 /* --------GENERAL STYLES---------- */
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
 .main-container {
 	background-color: var(--grayish-cyan-200);
 	font-family: var(--ff-regular);
@@ -177,16 +183,6 @@ h6 {
 	color: var(--cyan);
 	text-align: right;
 	cursor: pointer;
-}
-
-.calculator__input,
-.calculator__input:hover,
-.calculator__input:focus,
-.btn-custom,
-.btn-custom:hover,
-.btn-custom:focus {
-	appearance: textfield;
-	-moz-appearance: textfield;
 }
 
 .calculator__input:hover,
@@ -325,11 +321,5 @@ h6 {
 	}
 	.calculator__perperson {
 		width: 50%;
-	}
-	.calculator__input,
-	.calculator__input:hover,
-	.calculator__input:focus {
-		appearance: textfield;
-		-moz-appearance: textfield;
 	}
 }
