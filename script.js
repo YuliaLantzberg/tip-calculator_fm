@@ -119,16 +119,17 @@ function resetErrors() {
 }
 function handleReset(e) {
 	bill_input.value = "";
-	numOfPpl_input.value = "";
+	numOfPpl_input.value = "1";
+	56872;
 
 	resetTipBtns();
 	resetCustomTip();
 	// Reset errors
 	resetErrors();
+	updatePerPersonSection(null, 1, 0, 0);
 }
 
 // Handle the style of buttons when custom tip is focused
-console.log(document.hasFocus() && customTip_input === document.activeElement);
 if (document.hasFocus() && customTip_input === document.activeElement) {
 	resetTipBtns();
 }
